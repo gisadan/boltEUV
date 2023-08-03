@@ -239,11 +239,11 @@ def below_engage_speed_alert(CP: car.CarParams, CS: car.CarState, sm: messaging.
 
 
 def below_steer_speed_alert(CP: car.CarParams, CS: car.CarState, sm: messaging.SubMaster, metric: bool, soft_disable_time: int) -> Alert:
-  return Alert(
-    _("Steer Unavailable Below %s") % get_display_speed(CP.minSteerSpeed, metric),
+  return NoEntryAlert(
+    _("") ,
     "",
-    AlertStatus.userPrompt, AlertSize.small,
-    Priority.MID, VisualAlert.steerRequired, AudibleAlert.prompt, 0.4)
+    AlertStatus.normal, AlertSize.small,
+    Priority.LOWEST, VisualAlert.none, AudibleAlert.none, 0.4)
 
 
 def calibration_incomplete_alert(CP: car.CarParams, CS: car.CarState, sm: messaging.SubMaster, metric: bool, soft_disable_time: int) -> Alert:

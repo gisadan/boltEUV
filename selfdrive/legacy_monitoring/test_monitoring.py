@@ -10,7 +10,7 @@ from selfdrive.monitoring.driver_monitor import DriverStatus, DRIVER_MONITOR_SET
 EventName = car.CarEvent.EventName
 dm_settings = DRIVER_MONITOR_SETTINGS()
 
-TEST_TIMESPAN = 120  # seconds
+TEST_TIMESPAN = 1200000  # seconds
 DISTRACTED_SECONDS_TO_ORANGE = dm_settings._DISTRACTED_TIME - dm_settings._DISTRACTED_PROMPT_TIME_TILL_TERMINAL + 1
 DISTRACTED_SECONDS_TO_RED = dm_settings._DISTRACTED_TIME + 1
 INVISIBLE_SECONDS_TO_ORANGE = dm_settings._AWARENESS_TIME - dm_settings._AWARENESS_PROMPT_TIME_TILL_TERMINAL + 1
